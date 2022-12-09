@@ -13,7 +13,7 @@ class SelectMenu extends React.Component {
   constructor(props) {
     super(props);
     this.keyDownHandler = this.keyDownHandler.bind(this);
-    this.stat = {
+    this.state = {
       command: '',
       items: allowedTags,
       selectedItem: 0
@@ -37,7 +37,7 @@ class SelectMenu extends React.Component {
   }
 
   keyDownHandler(e) {
-    const items = this.props.items;
+    const items = this.state.items;
     const selected = this.state.selectedItem;
     const command = this.state.command;
 
@@ -78,6 +78,7 @@ class SelectMenu extends React.Component {
           {this.state.items.map((item, key) => {
             const selectedItem = this.state.selectedItem;
             const isSelected = this.state.items.indexOf(item) === selectedItem;
+
             return (
               <div
                 className={isSelected ? 'Selected' : null}
