@@ -1,4 +1,5 @@
 import React from 'react';
+import setCaretToEnd from './  setCaretToEnd';
 import EditableBlock from './editableBlock';
 import uid from './uid';
 
