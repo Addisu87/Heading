@@ -61,7 +61,7 @@ class EditableBlock extends React.Component {
   render() {
     return (
       <ContentEditable
-        className="Block"
+        className="p-4 bg-slate-400/20 bg-slate-300 outline w-[270px]"
         innerRef={this.contentEditable}
         html={this.state.html}
         tagName={this.state.tag}
