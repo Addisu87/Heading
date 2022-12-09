@@ -71,6 +71,7 @@ class SelectMenu extends React.Component {
     const x = this.props.position.x;
     const y = this.props.position.y - MENU_HEIGHT;
     const positionAttributes = { top: y, left: x };
+
     return (
       <div className="SelectMenu" style={positionAttributes}>
         <div className="Items">

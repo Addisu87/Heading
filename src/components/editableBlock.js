@@ -7,7 +7,7 @@ import setCaretToEnd from './setCaretToEnd';
 class EditableBlock extends React.Component {
   constructor(props) {
     super(props);
-    this.onChangHandler = this.onChangHandler.bind(this);
+    this.onChangeHandler = this.onChangeHandler.bind(this);
     this.onKeyDownHandler = this.onKeyDownHandler.bind(this);
     this.onKeyUpHandler = this.onKeyUpHandler.bind(this);
     this.openSelectMenuHandler = this.openSelectMenuHandler.bind(this);
@@ -115,7 +115,7 @@ class EditableBlock extends React.Component {
         )}
 
         <ContentEditable
-          className="p-4 bg-slate-400/20 bg-slate-300 outline w-[270px]"
+          className="Block"
           innerRef={this.contentEditable}
           html={this.state.html}
           tagName={this.state.tag}
