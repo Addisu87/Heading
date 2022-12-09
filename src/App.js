@@ -4,7 +4,7 @@ import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-      <header className="text-center font-bold text-4xl">
+      <header className="text-center font-bold text-4xl m-6">
         <h1 className="App-title">Front end developer test project</h1>
       </header>
       <Home />
