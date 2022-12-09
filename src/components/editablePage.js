@@ -53,7 +53,7 @@ class EditablePage extends React.Component {
 
   render() {
     return (
-      <div className="bg-gray-400/20 w-80">
+      <div className="">
         {this.state.blocks.map((block, key) => {
           return (
             <EditableBlock

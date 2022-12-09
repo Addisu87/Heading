@@ -3,7 +3,7 @@ import EditablePage from './editablePage';
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <EditablePage />
     </div>
   );
