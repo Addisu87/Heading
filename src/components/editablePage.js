@@ -1,5 +1,5 @@
 import React from 'react';
-import setCaretToEnd from './  setCaretToEnd';
+import setCaretToEnd from './setCaretToEnd';
 import EditableBlock from './editableBlock';
 import uid from './uid';
 
@@ -53,7 +53,7 @@ class EditablePage extends React.Component {
 
   render() {
     return (
-      <div className="Page">
+      <div className="bg-gray-800">
         {this.state.blocks.map((block, key) => {
           return (
             <EditableBlock

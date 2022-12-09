@@ -8,8 +8,10 @@ class EditableBlock extends React.Component {
     this.onKeyDownHandler = this.onKeyDownHandler.bind(this);
     this.contentEditable = React.createRef();
     this.state = {
+      htmlBackup: null,
       html: '',
-      tag: 'p'
+      tag: 'p',
+      previousKey: ''
     };
   }
 
