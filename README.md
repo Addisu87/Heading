@@ -66,7 +66,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://notion-addisu87.vercel.app/)
+- [Live Demo Link](https://notion-ie8jon84e-addisu87.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
