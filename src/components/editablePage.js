@@ -1,10 +1,7 @@
 import React from 'react';
+import uid from './uid';
 
 const initialBlock = { id: uid(), html: '', tag: 'p' };
-
-const uid = () => {
-  return Date.now().toString(36) + Math.random().toString(36);
-};
 
 class EditablePage extends React.Component {
   constructor(props) {
