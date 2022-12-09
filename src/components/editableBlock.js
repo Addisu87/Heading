@@ -5,6 +5,7 @@ class EditableBlock extends React.Component {
   constructor(props) {
     super(props);
     this.onChangHandler = this.onChangHandler.bind(this);
+    this.onKeyDownHandler = this.onKeyDownHandler.bind(this);
     this.contentEditable = React.createRef();
     this.state = {
       html: '',
@@ -32,6 +33,31 @@ class EditableBlock extends React.Component {
     this.setState({ html: e.target.value });
   }
 
+  onKeyDownHandler(e) {
+    if (e.key === '/') {
+      this.setState({ htmlBackup: this.state.html });
+    }
+
+    if (e.key === 'Enter') {
+      if (this.state.previousKey !== 'Shift') {
+        e.preventDefault();
+        this.props.addBlock({
+          id: this.props.id,
+          ref: this.contentEditable.current
+        });
+      }
+    }
+
+    if (e.key === 'Backspace' && !this.state.html) {
+      e.preventDefault();
+      this.props.deleteBlock({
+        id: this.props.id,
+        ref: this.contentEditable.current
+      });
+    }
+    this.setState({ previousKey: e.key });
+  }
+
   render() {
     return (
       <ContentEditable
@@ -40,6 +66,7 @@ class EditableBlock extends React.Component {
         html={this.state.html}
         tagName={this.state.tag}
         onChange={this.onChangeHandler}
+        onKeyDown={this.onKeyDownHandler}
       />
     );
   }
