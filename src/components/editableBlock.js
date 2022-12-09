@@ -115,7 +115,7 @@ class EditableBlock extends React.Component {
         )}
 
         <ContentEditable
-          className="Block"
+          className="border border-x-2 outline-dashed w-80 items-center justify-center p-2"
           innerRef={this.contentEditable}
           html={this.state.html}
           tagName={this.state.tag}
